@@ -36,6 +36,7 @@ func main() {
   router.POST("/", func(c *gin.Context){
     n := c.PostForm("n")
     likes[n] += 1
+    mcStore.Delete(cache.CreateKey("/?n=" + n))
     c.Redirect(http.StatusMovedPermanently, "/?n=" + n)
   })
 
