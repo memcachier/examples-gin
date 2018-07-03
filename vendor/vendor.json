@@ -45,6 +45,12 @@
 			"revisionTime": "2017-11-07T05:05:31Z"
 		},
 		{
+			"checksumSHA1": "CMS7lGJ2P9GNpJnuNj+Mdx7eK2o=",
+			"path": "github.com/memcachier/mc",
+			"revision": "445f9d5b9ddff140345c6c481a67c4021755f004",
+			"revisionTime": "2018-06-19T10:00:22Z"
+		},
+		{
 			"checksumSHA1": "d3YqGxTQPV3bo+sXijGmbpjf+WA=",
 			"path": "github.com/ugorji/go/codec",
 			"revision": "7d51bbe6161dcb8f32a1252c27668ce36e3ef16b",
