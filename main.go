@@ -7,6 +7,8 @@ import (
 
   "github.com/gin-contrib/cache"
   "github.com/gin-contrib/cache/persistence"
+  "github.com/gin-contrib/sessions"
+  "github.com/gin-contrib/sessions/memcached"
   "github.com/gin-gonic/gin"
   "github.com/memcachier/mc"
 )
@@ -29,6 +31,9 @@ func main() {
   router.Use(gin.Logger())
   router.LoadHTMLGlob("templates/*.tmpl.html")
   router.Static("/static", "static")
+
+  sessionStore := memcached.NewMemcacheStore(mcClient, "", []byte("secret"))
+  router.Use(sessions.Sessions("mysession", sessionStore))
 
   mcStore := persistence.NewMemcachedBinaryStore(servers, username, password, persistence.FOREVER)
 
