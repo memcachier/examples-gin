@@ -1,0 +1,9 @@
+{
+  "name": "MemCachier Gin Tutorial",
+  "description": "Go app for a tutorial on using Gin, MemCachier and Heroku together",
+  "keywords": ["go", "golang", "gin", "memcache", "memcached", "memcachier", "caching", "tutorial", "performance" ],
+  "logo": "https://www.memcachier.com/assets/logo-large.png",
+  "website": "https://www.memcachier.com",
+  "repository": "https://github.com/memcachier/examples-gin",
+  "addons": [ "memcachier" ],
+}
