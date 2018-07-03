@@ -29,7 +29,12 @@
       {{ if .prime }}
         <div class="alert alert-primary">
           <p class="lead">Largest prime less or equal than {{ .n }} is {{ .prime }}</p>
+          <p>Likes: {{ .likes }}</p>
         </div>
+        <form method='POST'>
+          <input type="hidden" name="n" value="{{ .n }}" />
+          <input type="submit" class="btn btn-primary" value="Like!" />
+        </form>
       {{ end }}
 
       <!-- Error handling -->

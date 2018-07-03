@@ -5,6 +5,8 @@ import (
   "os"
   "strconv"
 
+  "github.com/gin-contrib/cache"
+  "github.com/gin-contrib/cache/persistence"
   "github.com/gin-gonic/gin"
   "github.com/memcachier/mc"
 )
@@ -28,7 +30,16 @@ func main() {
   router.LoadHTMLGlob("templates/*.tmpl.html")
   router.Static("/static", "static")
 
-  router.GET("/", func(c *gin.Context) {
+  mcStore := persistence.NewMemcachedBinaryStore(servers, username, password, persistence.FOREVER)
+
+  likes := make(map[string]int)
+  router.POST("/", func(c *gin.Context){
+    n := c.PostForm("n")
+    likes[n] += 1
+    c.Redirect(http.StatusMovedPermanently, "/?n=" + n)
+  })
+
+  router.GET("/", cache.CachePage(mcStore, persistence.DEFAULT, func(c *gin.Context) {
     n := c.Query("n")
     if n == "" {
       // Render view
@@ -55,10 +66,10 @@ func main() {
           p, _ = strconv.Atoi(val)
         }
         // Render view with prime
-        c.HTML(http.StatusOK, "index.tmpl.html", gin.H{"n": i, "prime": p})
+        c.HTML(http.StatusOK, "index.tmpl.html", gin.H{"n": i, "prime": p, "likes": likes[n] })
       }
     }
-  })
+  }))
 
   router.Run(":" + port)
 }
