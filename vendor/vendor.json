@@ -45,6 +45,12 @@
 			"revisionTime": "2017-11-07T05:05:31Z"
 		},
 		{
+			"checksumSHA1": "CMS7lGJ2P9GNpJnuNj+Mdx7eK2o=",
+			"path": "github.com/memcachier/mc",
+			"revision": "445f9d5b9ddff140345c6c481a67c4021755f004",
+			"revisionTime": "2018-06-19T10:00:22Z"
+		},
+		{
 			"checksumSHA1": "dAiPFGEqTBO9ovat1DkSheJ6/KQ=",
 			"path": "github.com/ugorji/go/codec",
 			"revision": "2e1067cd04ec91c6fdf491ac8028c9d3aea73ab4",
@@ -69,5 +75,5 @@
 			"revisionTime": "2018-03-28T19:50:20Z"
 		}
 	],
-	"rootPath": "gin-memcache"
+	"rootPath": "github.com/memcachier/gin-memcache"
 }
