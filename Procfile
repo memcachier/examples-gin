@@ -1,1 +1,1 @@
-web: gin_memcache
+web: bin/application
