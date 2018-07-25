@@ -7,6 +7,8 @@ import (
 
   "github.com/gin-gonic/gin"
   "github.com/memcachier/mc"
+  "github.com/gin-contrib/sessions"
+  "github.com/gin-contrib/sessions/memcached"
 )
 
 func main() {
@@ -23,11 +25,24 @@ func main() {
   }
 
   router := gin.New()
+  sessionStore := memcached.NewMemcacheStore(mcClient, "", []byte("secret"))
+  router.Use(sessions.Sessions("mysession", sessionStore))
   router.Use(gin.Logger())
   router.LoadHTMLGlob("templates/*.tmpl.html")
   router.Static("/static", "static")
 
-  router.GET("/", func(c *gin.Context) {
+  mcStore := persistence.NewMemcachedBinaryStore(servers, username, password, persistence.FOREVER)
+
+  likes := make(map[string]int)
+
+  router.POST("/", func(c *gin.Context){
+    n := c.PostForm("n")
+    likes[n] += 1
+    mcStore.Delete(cache.CreateKey("/?n=" + n))
+    c.Redirect(http.StatusMovedPermanently, "/?n=" + n)
+  })
+
+  router.GET("/", cache.CachePage(mcStore, persistence.DEFAULT, func(c *gin.Context) {
     n := c.Query("n")
     if n == "" {
       // Render view
@@ -54,10 +69,10 @@ func main() {
           p, _ = strconv.Atoi(val)
         }
         // Render view with prime
-        c.HTML(http.StatusOK, "index.tmpl.html", gin.H{"n": i, "prime": p})
+        c.HTML(http.StatusOK, "index.tmpl.html", gin.H{"n": i, "prime": p, "likes": likes[n] })
       }
     }
-  })
+  }))
 
   router.Run(":" + port)
 }

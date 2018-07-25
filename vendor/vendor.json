@@ -3,6 +3,48 @@
 	"ignore": "test",
 	"package": [
 		{
+			"checksumSHA1": "56J7Zbj/haU4YAzYq+PvTfFxk8Y=",
+			"path": "github.com/bradfitz/gomemcache/memcache",
+			"revision": "bc664df9673713a0ccf26e3b55a673ec7301088b",
+			"revisionTime": "2018-07-10T15:56:16Z"
+		},
+		{
+			"checksumSHA1": "VGdmmUiV3nlIVPGjdm1ClOjLOIo=",
+			"path": "github.com/bradleypeabody/gorilla-sessions-memcache",
+			"revision": "4e5d6d5438516890d498442bd77bdabddf8f31fd",
+			"revisionTime": "2018-06-21T17:27:31Z"
+		},
+		{
+			"checksumSHA1": "yOKjJ9Wcaz2xrXD+ZL7ndTTBKJY=",
+			"path": "github.com/gin-contrib/cache",
+			"revision": "6b4ffed64d167edff23695c7bd60af88a6792120",
+			"revisionTime": "2018-07-02T03:15:59Z"
+		},
+		{
+			"checksumSHA1": "miBlXX7mQ6zknWj0U4ZhMVuAsJ8=",
+			"path": "github.com/gin-contrib/cache/persistence",
+			"revision": "6b4ffed64d167edff23695c7bd60af88a6792120",
+			"revisionTime": "2018-07-02T03:15:59Z"
+		},
+		{
+			"checksumSHA1": "NDh5MuQeIW05zTQzpY5kEmrWKiU=",
+			"path": "github.com/gin-contrib/cache/utils",
+			"revision": "6b4ffed64d167edff23695c7bd60af88a6792120",
+			"revisionTime": "2018-07-02T03:15:59Z"
+		},
+		{
+			"checksumSHA1": "H5YFYmUpnlLVKNBk+HXH/wYJLw4=",
+			"path": "github.com/gin-contrib/sessions",
+			"revision": "854e10e72056b122034a60b0fa207b8f29ae3d07",
+			"revisionTime": "2018-07-24T13:23:11Z"
+		},
+		{
+			"checksumSHA1": "UuLWWCzVzFzdTO3qDJcLErZi+fw=",
+			"path": "github.com/gin-contrib/sessions/memcached",
+			"revision": "854e10e72056b122034a60b0fa207b8f29ae3d07",
+			"revisionTime": "2018-07-24T13:23:11Z"
+		},
+		{
 			"checksumSHA1": "QeKwBtN2df+j+4stw3bQJ6yO4EY=",
 			"path": "github.com/gin-contrib/sse",
 			"revision": "22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae",
@@ -39,6 +81,36 @@
 			"revisionTime": "2018-07-24T20:30:48Z"
 		},
 		{
+			"checksumSHA1": "w3QCCIYHgZzIXQ+xTl7oLfFrXHs=",
+			"path": "github.com/gomodule/redigo/internal",
+			"revision": "2cd21d9966bf7ff9ae091419744f0b3fb0fecace",
+			"revisionTime": "2018-06-27T14:45:07Z"
+		},
+		{
+			"checksumSHA1": "To/N5YA/FD0Rrs6r2OOmHXgxYwI=",
+			"path": "github.com/gomodule/redigo/redis",
+			"revision": "2cd21d9966bf7ff9ae091419744f0b3fb0fecace",
+			"revisionTime": "2018-06-27T14:45:07Z"
+		},
+		{
+			"checksumSHA1": "g/V4qrXjUGG9B+e3hB+4NAYJ5Gs=",
+			"path": "github.com/gorilla/context",
+			"revision": "08b5f424b9271eedf6f9f0ce86cb9396ed337a42",
+			"revisionTime": "2016-08-17T18:46:32Z"
+		},
+		{
+			"checksumSHA1": "mitzC+fL94AXk/KeUfEZG6Ynb3U=",
+			"path": "github.com/gorilla/securecookie",
+			"revision": "78f3d318a8bf316cda921f25e96fd0b441c5173d",
+			"revisionTime": "2018-06-08T14:44:17Z"
+		},
+		{
+			"checksumSHA1": "nB526COHQwGljTcMf+JJP3gc9Ck=",
+			"path": "github.com/gorilla/sessions",
+			"revision": "03b6f63cc43ef9c7240a635a5e22b13180e822b8",
+			"revisionTime": "2018-06-06T15:52:11Z"
+		},
+		{
 			"checksumSHA1": "w5RcOnfv5YDr3j2bd1YydkPiZx4=",
 			"path": "github.com/mattn/go-isatty",
 			"revision": "6ca4dbf54d38eea1a992b3c722a76a5d1c4cb25c",
@@ -49,6 +121,12 @@
 			"path": "github.com/memcachier/mc",
 			"revision": "445f9d5b9ddff140345c6c481a67c4021755f004",
 			"revisionTime": "2018-06-19T10:00:22Z"
+		},
+		{
+			"checksumSHA1": "XzHDmND/Rq9/RLKBP2fnAtBJu2M=",
+			"path": "github.com/robfig/go-cache",
+			"revision": "9fc39e0dbf62c034ec4e45e6120fc69433a3ec51",
+			"revisionTime": "2013-03-06T15:13:11Z"
 		},
 		{
 			"checksumSHA1": "dAiPFGEqTBO9ovat1DkSheJ6/KQ=",
